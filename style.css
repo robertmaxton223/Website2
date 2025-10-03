@@ -1,112 +1,70 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif; /* আপনি পছন্দের ফন্ট ব্যবহার করতে পারেন */
-}
-
 body {
-    background-color: #f4f4f4;
-    color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
 }
 
-/* Header Styling */
-.main-header {
-    background-color: #000; /* কালো ব্যাকগ্রাউন্ড */
-    border-top: 5px solid #ff0000; /* উপরে লাল স্ট্রিপ */
-    color: #fff;
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.top-bar {
+  height: 5px;
+  background: red;
+}
+
+header {
+  background: #000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
 }
 
 .logo {
-    font-size: 1.8em;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-/* Hamburger Menu Icon (3 Lines) */
-.menu-toggle {
-    display: block; /* ছোট স্ক্রিনে দেখাবে */
-    cursor: pointer;
-    padding: 5px;
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.line {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
+.menu {
+  display: none;
+  list-style: none;
+  background: #111;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navigation Links */
-.nav-links {
-    list-style: none;
-    display: none; /* ছোট স্ক্রিনে হাইড থাকবে */
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Adjust based on header height */
-    right: 5%;
-    background-color: #333;
-    width: 200px;
-    z-index: 10;
-    padding: 10px 0;
-    border-radius: 5px;
+.menu li {
+  border-bottom: 1px solid #333;
 }
 
-.nav-links.active {
-    display: flex; /* JavaScript দিয়ে 'active' ক্লাস অ্যাড হবে */
+.menu li a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
 }
 
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-    transition: background-color 0.3s;
+.menu li a:hover {
+  background: red;
 }
 
-.nav-links li a:hover {
-    background-color: #ff0000; /* হোভারে লাল রঙ */
+main {
+  padding: 20px;
+  min-height: 70vh;
 }
 
-/* Media Query for larger screens (Desktop/Tablet) */
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none; /* বড় স্ক্রিনে হাইড থাকবে */
-    }
-    .nav-links {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        width: auto;
-        background-color: transparent;
-        padding: 0;
-    }
-    .nav-links li a {
-        padding: 10px 15px;
-        border-radius: 5px;
-    }
-    .nav-links li a:hover {
-        background-color: #333;
-    }
-}
-
-/* Main Content Styling */
-.content-area {
-    min-height: calc(100vh - 150px); /* Adjust based on header/footer height */
-    padding: 20px 5%;
-}
-
-/* Footer Styling */
-.main-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
 }
