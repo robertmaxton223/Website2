@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>প্রফেশনাল ওয়েবসাইট</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Header -->
+  <header>
+    <div class="top-bar"></div>
+    <div class="navbar">
+      <div class="logo">My Website</div>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+    <ul id="menu" class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="article.html">Article</a></li>
+      <li><a href="admin.html">Admin Panel</a></li>
+    </ul>
+  </header>
 
-    <header class="main-header">
-        <div class="logo">আপনার লোগো/নাম</div>
-        <nav class="nav-menu">
-            <div class="menu-toggle" id="menuToggle">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li><a href="audio.html">Audio</a></li>
-                <li><a href="article.html">Article</a></li>
-                <li><a href="#" id="adminLink">Admin Panel</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Main Content -->
+  <main>
+    <h1>Welcome to My Website</h1>
+    <p>এখানে আপনার ভিডিও, অডিও, আর্টিকেল থাকবে।</p>
+  </main>
 
-    <main class="content-area">
-        <h1>স্বাগতম</h1>
-        </main>
-
-    <footer class="main-footer">
-        <p>&copy; 2024 আপনার ওয়েবসাইট। সর্বস্বত্ত্ব সংরক্ষিত।</p>
-        </footer>
-
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Website | Designed with ❤</p>
+  </footer>
 </body>
 </html>
