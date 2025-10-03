@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #f0f8ff;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        margin-top: 50px;
+        color: #ff69b4;
+        font-size: 2.5rem;
+    }
+    button {
+        padding: 15px 30px;
+        margin: 20px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    button:hover {
+        transform: scale(1.1);
+    }
+    #yesBtn { background-color: #4CAF50; color: white; }
+    #noBtn { background-color: #f44336; color: white; }
+    #scene {
+        margin-top: 50px;
+        max-width: 90%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        display: none;
+    }
+</style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="top-bar"></div>
-    <div class="navbar">
-      <div class="logo">My Website</div>
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    </div>
-    <ul id="menu" class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="video.html">Video</a></li>
-      <li><a href="audio.html">Audio</a></li>
-      <li><a href="article.html">Article</a></li>
-      <li><a href="admin.html">Admin Panel</a></li>
-    </ul>
-  </header>
 
-  <!-- Main Content -->
-  <main>
-    <h1>Welcome to My Website</h1>
-    <p>এখানে আপনার ভিডিও, অডিও, আর্টিকেল থাকবে।</p>
-  </main>
+<h1>Do you love me?</h1>
+<button id="yesBtn">Yes ❤️</button>
+<button id="noBtn">No 😢</button>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 My Website | Designed with ❤</p>
-  </footer>
+<img id="scene" src="" alt="Scene Image">
+
+<script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const scene = document.getElementById('scene');
+
+    // Yes/No image URLs (replace with your generated images)
+    const yesImage = 'https://your-romantic-scene-image-url.com/romantic.jpg';
+    const noImage = 'https://your-funny-scene-image-url.com/funny.jpg';
+
+    yesBtn.addEventListener('click', () => {
+        scene.src = yesImage;
+        scene.style.display = 'block';
+    });
+
+    noBtn.addEventListener('click', () => {
+        scene.src = noImage;
+        scene.style.display = 'block';
+    });
+</script>
+
 </body>
 </html>
