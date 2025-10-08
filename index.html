@@ -1,73 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Do You Love Me?</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background: #f0f8ff;
-        margin: 0;
-        padding: 0;
-    }
-    h1 {
-        margin-top: 50px;
-        color: #ff69b4;
-        font-size: 2.5rem;
-    }
-    button {
-        padding: 15px 30px;
-        margin: 20px;
-        font-size: 1.2rem;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.2s;
-    }
-    button:hover {
-        transform: scale(1.1);
-    }
-    #yesBtn { background-color: #4CAF50; color: white; }
-    #noBtn { background-color: #f44336; color: white; }
-    #scene {
-        margin-top: 50px;
-        max-width: 90%;
-        height: auto;
-        border-radius: 20px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
-        display: none;
-    }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robert Maxton</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <img src="assets/logo.png" alt="Hacker Logo" />
+    <span>Robert Maxton</span>
+  </div>
 
-<h1>Do you love me?</h1>
-<button id="yesBtn">Yes ❤️</button>
-<button id="noBtn">No 😢</button>
+  <!-- Header -->
+  <header>
+    <div class="menu">
+      <button class="menu-btn">☰</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#blog">Blog Post</a>
+        <a href="#videos">Videos</a>
+        <a href="#photos">Photo</a>
+        <a href="admin.html">Admin Panel</a>
+      </nav>
+    </div>
+    <input type="text" placeholder="Search..." class="search-bar" />
+  </header>
 
-<img id="scene" src="" alt="Scene Image">
+  <!-- Body -->
+  <main>
+    <section id="videos">
+      <h2>Videos</h2>
+      <video controls src="assets/sample-video.mp4"></video>
+      <video controls src="assets/sample-video.mp4"></video>
+    </section>
 
-<script>
-    const yesBtn = document.getElementById('yesBtn');
-    const noBtn = document.getElementById('noBtn');
-    const scene = document.getElementById('scene');
+    <section id="photos">
+      <h2>Photos</h2>
+      <img src="assets/sample-photo.jpg" alt="Photo" />
+      <img src="assets/sample-photo.jpg" alt="Photo" />
+    </section>
 
-    // Yes/No image URLs (replace with your generated images)
-    const yesImage = 'https://your-romantic-scene-image-url.com/romantic.jpg';
-    const noImage = 'https://your-funny-scene-image-url.com/funny.jpg';
+    <section id="blog">
+      <h2>Blog Posts</h2>
+      <div class="blog-card">
+        <img src="assets/sample-photo.jpg" alt="Blog Thumbnail" />
+        <a href="blog1.html">Blog Title</a>
+      </div>
+    </section>
+  </main>
 
-    yesBtn.addEventListener('click', () => {
-        scene.src = yesImage;
-        scene.style.display = 'block';
-    });
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Robert Maxton. All Rights Reserved.</p>
+    <div class="footer-columns">
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: macro2344329040@gmail.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Street, City, Country</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <p>Facebook | Twitter | Instagram | LinkedIn</p>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <p>Privacy Policy | Terms | Cookies</p>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Your email" />
+        <button>Subscribe</button>
+      </div>
+      <div>
+        <h4>CTA</h4>
+        <p>Need help? Contact us today!</p>
+        <p>Join our community!</p>
+      </div>
+      <div>
+        <h4>Tagline</h4>
+        <p>Innovating for a better future.</p>
+        <p>Your trusted partner since 2024.</p>
+      </div>
+      <div>
+        <h4>Payments</h4>
+        <p>Visa | Mastercard | PayPal</p>
+      </div>
+    </div>
+    <a href="#" class="back-to-top">↑ Back to Top</a>
+  </footer>
 
-    noBtn.addEventListener('click', () => {
-        scene.src = noImage;
-        scene.style.display = 'block';
-    });
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
