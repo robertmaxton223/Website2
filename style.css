@@ -1,0 +1,79 @@
+body {
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  background-color: white;
+  color: black;
+}
+
+.top-banner {
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.top-banner img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header {
+  background-color: black;
+  border-top: 5px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.search-bar {
+  padding: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+video, img {
+  width: 30%;
+  margin: 10px;
+}
+
+.blog-card {
+  display: flex;
+  align-items: center;
+}
+
+.blog-card img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.back-to-top {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
