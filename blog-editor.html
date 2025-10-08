@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Editor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>Write a New Blog</h1>
+
+  <input type="text" id="blog-title" placeholder="Blog Title" />
+  <div id="editor-container" style="height: 300px;"></div>
+
+  <label>Upload Media (Video/Audio/File):</label>
+  <input type="file" id="media-upload" multiple />
+
+  <button onclick="saveBlog()">Save Blog</button>
+
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script>
+    const quill = new Quill('#editor-container', {
+      theme: 'snow'
+    });
+
+    function saveBlog() {
+      const title = document.getElementById('blog-title').value;
+      const content = quill.root.innerHTML;
+      const files = document.getElementById('media-upload').files;
+
+      const blog = {
+        title,
+        content,
+        media: [],
+        id: Date.now()
+      };
+
+      for (let file of files) {
+        const url = URL.createObjectURL(file);
+        blog.media.push({ name: file.name, url });
+      }
+
+      const blogs = JSON.parse(localStorage.getItem('blogs') || '[]');
+      blogs.push(blog);
+      localStorage.setItem('blogs', JSON.stringify(blogs));
+      alert('Blog saved successfully!');
+    }
+  </script>
+</body>
+</html>
