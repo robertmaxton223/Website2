@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Welcome to Admin Dashboard</h1>
+
+  <!-- Post Management -->
+  <section>
+    <h2>Post Management</h2>
+    <div class="post-options">
+      <button onclick="showForm('blog')">Blog Post</button>
+      <button onclick="showForm('video')">Video</button>
+      <button onclick="showForm('photo')">Photo</button>
+    </div>
+
+    <div id="blog-form" class="form-section" style="display:none;">
+      <h3>Create Blog Post</h3>
+      <input type="text" placeholder="Title" />
+      <textarea placeholder="Details (bold, underline, color supported)"></textarea>
+      <input type="file" accept="image/*,video/*,audio/*" />
+      <input type="url" placeholder="Media Link" />
+      <button>Post</button>
+    </div>
+
+    <div id="video-form" class="form-section" style="display:none;">
+      <h3>Upload Video</h3>
+      <input type="text" placeholder="Title" />
+      <input type="file" accept="video/*" />
+      <input type="url" placeholder="Video Link" />
+      <button>Post</button>
+    </div>
+
+    <div id="photo-form" class="form-section" style="display:none;">
+      <h3>Upload Photo</h3>
+      <input type="text" placeholder="Title" />
+      <input type="file" accept="image/*" />
+      <input type="url" placeholder="Photo Link" />
+      <button>Post</button>
+    </div>
+  </section>
+
+  <!-- Visitor Tracker -->
+  <section>
+    <h2>Visitor Tracker</h2>
+    <p>Total Visitors: <span id="visitor-count">0</span></p>
+    <ul id="visitor-list">
+      <!-- IPs will be listed here -->
+    </ul>
+  </section>
+
+  <script>
+    function showForm(type) {
+      document.getElementById("blog-form").style.display = "none";
+      document.getElementById("video-form").style.display = "none";
+      document.getElementById("photo-form").style.display = "none";
+      document.getElementById(`${type}-form`).style.display = "block";
+    }
+
+    // Dummy visitor data
+    const visitors = ["192.168.0.1", "103.56.23.4", "45.67.89.10"];
+    document.getElementById("visitor-count").innerText = visitors.length;
+    const list = document.getElementById("visitor-list");
+    visitors.forEach(ip => {
+      const li = document.createElement("li");
+      li.innerText = ip + " [Edit] [Delete]";
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
