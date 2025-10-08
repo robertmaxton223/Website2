@@ -1,15 +1,42 @@
+/* Global Styles */
 body {
   font-family: 'Times New Roman', serif;
   margin: 0;
+  padding: 0;
   background-color: white;
   color: black;
 }
 
+h1, h2, h3 {
+  margin: 20px 0 10px;
+}
+
+input, textarea, button {
+  font-family: 'Times New Roman', serif;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: red;
+}
+
+/* Top Banner */
 .top-banner {
   background: white;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
 }
 
 .top-banner img {
@@ -17,41 +44,53 @@ body {
   margin-right: 10px;
 }
 
+.top-banner span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Header */
 header {
   background-color: black;
   border-top: 5px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .menu nav a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .search-bar {
   padding: 5px;
+  width: 200px;
 }
 
+/* Main Sections */
 main {
   padding: 20px;
 }
 
 section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-video, img {
-  width: 30%;
-  margin: 10px;
+video, audio, img {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0;
 }
 
+/* Blog Card */
 .blog-card {
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 
 .blog-card img {
@@ -59,21 +98,67 @@ video, img {
   margin-right: 10px;
 }
 
+/* Footer */
 footer {
   background-color: black;
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .footer-columns {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
+  margin-top: 20px;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .back-to-top {
   display: block;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
   color: white;
+  font-weight: bold;
+}
+
+/* Login Page */
+.login-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blog-card img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
